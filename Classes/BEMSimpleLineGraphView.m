@@ -254,10 +254,10 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
     } else if ([self.delegate respondsToSelector:@selector(numberOfPointsInGraph)]) {
         [self printDeprecationWarningForOldMethod:@"numberOfPointsInGraph" andReplacementMethod:@"numberOfPointsInLineGraph:"];
         
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        numberOfPoints = [self.delegate numberOfPointsInGraph];
-#pragma clang diagnostic pop
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+//        numberOfPoints = [self.delegate numberOfPointsInGraph];
+//#pragma clang diagnostic pop
         
     } else if ([self.delegate respondsToSelector:@selector(numberOfPointsInLineGraph:)]) {
         [self printDeprecationAndUnavailableWarningForOldMethod:@"numberOfPointsInLineGraph:"];
@@ -488,10 +488,10 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
             } else if ([self.delegate respondsToSelector:@selector(valueForIndex:)]) {
                 [self printDeprecationWarningForOldMethod:@"valueForIndex:" andReplacementMethod:@"lineGraph:valueForPointAtIndex:"];
                 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-                dotValue = [self.delegate valueForIndex:i];
-#pragma clang diagnostic pop
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+//                dotValue = [self.delegate valueForIndex:i];
+//#pragma clang diagnostic pop
                 
             } else if ([self.delegate respondsToSelector:@selector(lineGraph:valueForPointAtIndex:)]) {
                 [self printDeprecationAndUnavailableWarningForOldMethod:@"lineGraph:valueForPointAtIndex:"];
@@ -702,10 +702,10 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
         } else if ([self.delegate respondsToSelector:@selector(numberOfGapsBetweenLabels)]) {
             [self printDeprecationWarningForOldMethod:@"numberOfGapsBetweenLabels" andReplacementMethod:@"numberOfGapsBetweenLabelsOnLineGraph:"];
             
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-            numberOfGaps = [self.delegate numberOfGapsBetweenLabels] + 1;
-#pragma clang diagnostic pop
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+//            numberOfGaps = [self.delegate numberOfGapsBetweenLabels] + 1;
+//#pragma clang diagnostic pop
             
         } else {
             numberOfGaps = 1;
@@ -811,10 +811,10 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
     } else if ([self.delegate respondsToSelector:@selector(labelOnXAxisForIndex:)]) {
         [self printDeprecationWarningForOldMethod:@"labelOnXAxisForIndex:" andReplacementMethod:@"lineGraph:labelOnXAxisForIndex:"];
         
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        xAxisLabelText = [self.delegate labelOnXAxisForIndex:index];
-#pragma clang diagnostic pop
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+//        xAxisLabelText = [self.delegate labelOnXAxisForIndex:index];
+//#pragma clang diagnostic pop
         
     } else if ([self.delegate respondsToSelector:@selector(lineGraph:labelOnXAxisForIndex:)]) {
         [self printDeprecationAndUnavailableWarningForOldMethod:@"lineGraph:labelOnXAxisForIndex:"];
@@ -1333,10 +1333,10 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
         } else if ([self.delegate respondsToSelector:@selector(didTouchGraphWithClosestIndex:)] && self.enableTouchReport == YES) {
             [self printDeprecationWarningForOldMethod:@"didTouchGraphWithClosestIndex:" andReplacementMethod:@"lineGraph:didTouchGraphWithClosestIndex:"];
             
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-            [self.delegate didTouchGraphWithClosestIndex:((int)closestDot.tag - DotFirstTag100)];
-#pragma clang diagnostic pop
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+//            [self.delegate didTouchGraphWithClosestIndex:((int)closestDot.tag - DotFirstTag100)];
+//#pragma clang diagnostic pop
         }
     }
     
@@ -1348,10 +1348,10 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
         } else if ([self.delegate respondsToSelector:@selector(didReleaseGraphWithClosestIndex:)]) {
             [self printDeprecationWarningForOldMethod:@"didReleaseGraphWithClosestIndex:" andReplacementMethod:@"lineGraph:didReleaseTouchFromGraphWithClosestIndex:"];
             
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-            [self.delegate didReleaseGraphWithClosestIndex:(closestDot.tag - DotFirstTag100)];
-#pragma clang diagnostic pop
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+//            [self.delegate didReleaseGraphWithClosestIndex:(closestDot.tag - DotFirstTag100)];
+//#pragma clang diagnostic pop
         }
         
         [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -1472,10 +1472,10 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
                 } else if ([self.delegate respondsToSelector:@selector(valueForIndex:)]) {
                     [self printDeprecationWarningForOldMethod:@"valueForIndex:" andReplacementMethod:@"lineGraph:valueForPointAtIndex:"];
                     
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-                    dotValue = [self.delegate valueForIndex:i];
-#pragma clang diagnostic pop
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+//                    dotValue = [self.delegate valueForIndex:i];
+//#pragma clang diagnostic pop
                     
                 } else if ([self.delegate respondsToSelector:@selector(lineGraph:valueForPointAtIndex:)]) {
                     [self printDeprecationAndUnavailableWarningForOldMethod:@"lineGraph:valueForPointAtIndex:"];
@@ -1513,10 +1513,10 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
                 } else if ([self.delegate respondsToSelector:@selector(valueForIndex:)]) {
                     [self printDeprecationWarningForOldMethod:@"valueForIndex:" andReplacementMethod:@"lineGraph:valueForPointAtIndex:"];
                     
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-                    dotValue = [self.delegate valueForIndex:i];
-#pragma clang diagnostic pop
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+//                    dotValue = [self.delegate valueForIndex:i];
+//#pragma clang diagnostic pop
                     
                 } else if ([self.delegate respondsToSelector:@selector(lineGraph:valueForPointAtIndex:)]) {
                     [self printDeprecationAndUnavailableWarningForOldMethod:@"lineGraph:valueForPointAtIndex:"];
